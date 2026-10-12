@@ -276,7 +276,7 @@ function createProductCard(product, isListView) {
   }
   const imageBox = document.createElement("div");
   imageBox.className =
-    "relative h-[270px] w-full overflow-hidden rounded-[15px] bg-[#f6f6f8]";
+    "relative h-[270px] w-full overflow-hidden rounded-[15px] bg-[#f6f6f8] flex items-center justify-center ";
   imageBox.dataset.imageBox = "true";
 
   if (isListView) {
@@ -285,12 +285,13 @@ function createProductCard(product, isListView) {
 
   const productImage = document.createElement("img");
   productImage.className =
-    "block h-[270px] w-full max-w-full rounded-[15px] transition-transform duration-500 ease-out group-hover/c:scale-105 group-data-[show=true]/c:scale-105 cursor-pointer";
+    "block h-[270px] w-[280px] max-w-full rounded-[15px] transition-transform duration-500 ease-out group-hover/c:scale-105 group-data-[show=true]/c:scale-105 cursor-pointer";
+
   productImage.src = product.image;
   productImage.alt = product.title;
 
   if (isListView) {
-    productImage.classList.add("xl:w-[60%]", "xl:ml-[110px]", "xl:shrink-0");
+    productImage.classList.add("xl:w-[60%]");
   }
 
   const iconButtonsBox = document.createElement("div");
